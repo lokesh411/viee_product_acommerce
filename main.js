@@ -17,9 +17,9 @@ $(document).ready(function () {
         src:data.image,
         alt:data.image
     });
-    $("#title").text(data.title);
-    $("#price").text(data.price);
-    $("#desc").text(data.description);
+    $("#title").html(data.title);
+    $("#price").html(data.price);
+    $("#desc").html(data.description);
 
 })
 

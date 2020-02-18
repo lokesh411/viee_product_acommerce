@@ -11,15 +11,15 @@ const getQueryParams = (params, url) => {
 let dataString = getQueryParams('data', window.location);
 let str = decodeURIComponent(dataString)
 let data = JSON.parse(str)
-console.log(dataString)
+console.log(data.description)
 $(document).ready(function () {
     $("#prodimg").attr({
         src:data.image,
         alt:data.image
     });
-    $("#title").html(data.title);
-    $("#price").html(data.price);
-    $("#desc").html(data.description);
+    $("#title").html(data.title.replace(/\+/g, ' '));
+    $("#price").html(data.price.replace(/\+/g, ' '));
+    $("#desc").html(data.description.replace(/\+/g, ' '));
+    document.getElementById('title').style.fontWeight = '600'
 
 })
-

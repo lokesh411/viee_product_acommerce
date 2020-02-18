@@ -20,6 +20,6 @@ $(document).ready(function () {
     $("#title").html(data.title.replace(/\+/g, ' '));
     $("#price").html(data.price.replace(/\+/g, ' '));
     $("#desc").html(data.description.replace(/\+/g, ' '));
-    document.getElementById('title').style.fontWeight = '600'
+    document.getElementById('title').style.fontWeight = '500';
 
 })
